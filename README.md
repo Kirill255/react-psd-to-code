@@ -7,3 +7,5 @@ https://coursehunters.net/course/pervoe-prilozhenie-na-react-js-za-3-dnya
 https://github.com/OsArts/slider-react/issues/2
 
 https://github.com/OsArts/slider-react
+
+https://github.com/Deonar/react
