@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Main from "./components/Main";
 
+const bg_url = process.env.PUBLIC_URL + "/img/bg.png";
+
 const HeaderWrapper = styled.header`
   width: 100%;
   height: 49px;
@@ -15,6 +17,13 @@ const HeaderWrapper = styled.header`
 const MenuWrapper = styled.div`
   height: 89px;
   padding-top: 20px;
+`;
+
+const MainWrapper = styled.main`
+  height: 600px;
+  padding-top: 130px;
+  background: url(${bg_url}) no-repeat;
+  background-size: cover;
 `;
 
 function App() {
@@ -28,7 +37,9 @@ function App() {
         <Menu />
       </MenuWrapper>
 
-      <Main />
+      <MainWrapper>
+        <Main />
+      </MainWrapper>
     </div>
   );
 }
