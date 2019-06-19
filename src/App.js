@@ -12,6 +12,11 @@ const HeaderWrapper = styled.header`
   opacity: 0.8;
 `;
 
+const MenuWrapper = styled.div`
+  height: 89px;
+  padding-top: 20px;
+`;
+
 function App() {
   return (
     <div className="App">
@@ -19,7 +24,10 @@ function App() {
         <Header />
       </HeaderWrapper>
 
-      <Menu />
+      <MenuWrapper>
+        <Menu />
+      </MenuWrapper>
+
       <Main />
     </div>
   );
