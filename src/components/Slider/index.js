@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import classNames from "classnames";
 
 import Slide_1 from "./img/slide-1.png";
 import Slide_2 from "./img/slide-2.png";
@@ -65,12 +66,14 @@ function Slider() {
     setActive(index);
   };
 
-  const isActive = (index) => {
-    if (active === index) {
-      return "active";
-    } else {
-      return "";
-    }
+  // https://stackoverflow.com/questions/34521797/how-to-add-multiple-classes-to-a-reactjs-component
+  const dotClasses = (index) => {
+    const classes = classNames({
+      dots: true, // всегда true
+      active: active === index // true or false
+    });
+
+    return classes;
   };
 
   const setSliderStyles = () => {
@@ -103,7 +106,7 @@ function Slider() {
     return slides.map((item, index) => (
       <li
         key={index}
-        className={isActive(index) +  " dots"}
+        className={dotClasses(index)}
         onClick={() => clickOnDots(index)}
       >
         <i>&#9679;</i>
