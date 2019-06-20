@@ -5,6 +5,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import Slider from "./Slider";
+
 const Repair = styled.div`
   color: #ffffff;
   font-weihgt: 700;
@@ -54,7 +56,9 @@ function Main() {
 
           <CallBtn> Отправить заявку! </CallBtn>
         </Col>
-        <Col lg={{ span: 6, offset: 1 }}>Slider</Col>
+        <Col lg={{ span: 6, offset: 1 }}>
+          <Slider />
+        </Col>
       </Row>
     </Container>
   );
